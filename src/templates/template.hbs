@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/public/css/styles.css">
+  <title>Tu Aplicación Handlebars</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"></script>
+
+</head>
+<body>
+  <header>
+   
+    <img src="{{logo.image.src}}" alt="{{logo.alt}}">
+  </header>
+  <nav>
+    <ul>
+      {{#each navigation.items}}
+        <li><a href="{{href}}">{{text}}</a></li>
+      {{/each}}
+    </ul>
+  </nav>
+  <main>
+    <h1>{{headline}}</h1>
+    <p>{{subHeadline}}</p>
+
+    <!-- Breadcrumbs -->
+    <nav>
+      <ul>
+        {{#each breadcrumbs}}
+          <li><a href="{{href}}">{{body}}</a></li>
+        {{/each}}
+      </ul>
+    </nav>
+
+    <!-- Page Lead Image -->
+    <img src="{{pageLead.image.src}}" alt="{{pageLead.alt}}">
+
+    <!-- Acciones -->
+    <div>
+      {{#each actions.items}}
+        <button>{{body}}</button>
+      {{/each}}
+    </div>
+  </main>
+  <footer>
+
+    <ul>
+      {{#each social.items}}
+        <li><a href="{{href}}">{{body}}</a></li>
+      {{/each}}
+    </ul>
+  </footer>
+  <script src="/public/js/app.js"></script>
+</body>
+</html>
