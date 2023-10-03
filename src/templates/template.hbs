@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{headline}}</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <header>
+        <!-- Menú -->
+        <nav>
+            <ul>
+                {{#each navigation}}
+                    {{#each items}}
+                        <li><a href="{{href}}" class="{{#if isCurrent}}current{{/if}}">{{text}}</a></li>
+                    {{/each}}
+                {{/each}}
+            </ul>
+        </nav>
+        <!-- Header con color verde (pagelead) -->
+        <div class="pagelead">
+            {{#each pageLead}}
+                <img src="{{image.src}}" alt="{{alt}}" width="{{image.width}}" height="{{image.height}}">
+            {{/each}}
+        </div>
+        <!-- Breadcrumbs -->
+        <nav>
+            <ul>
+                {{#each breadcrumbs}}
+                    <li><a href="{{href}}">{{body}}</a></li>
+                {{/each}}
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="content">
+            <!-- Imagen (lead) -->
+            <div class="lead">
+                {{#each lead}}
+                    <img src="{{image.src}}" alt="{{alt}}" width="{{image.width}}" height="{{image.height}}">
+                {{/each}}
+            </div>
+            <!-- Título (headline) -->
+            <h1>{{headline}}</h1>
+            <!-- Texto breve (subheadline) -->
+            <p class="subheadline">{{{subHeadline}}}</p>
+            <!-- Opción Escuchar Audio (audioplayer) -->
+            {{#each audioPlayer}}
+                <div class="audioplayer">
+                    <h2>{{audioTitle}}</h2>
+                    <audio controls>
+                        <source src="{{audioUrl}}" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                </div>
+            {{/each}}
+            <!-- Links a redes sociales (actions) -->
+            <div class="actions">
+                {{#each actions}}
+                    {{#each items}}
+                        <a href="{{href}}" class="{{_template}}" data-display="{{display}}" data-facebook-app-id="{{facebookAppId}}" data-redirect-uri="{{redirectUri}}" data-share-href="{{shareHref}}" data-hashtags="{{hashtags}}" data-text="{{text}}" data-description="{{description}}">{{body}}</a>
+                    {{/each}}
+                {{/each}}
+            </div>
+        </section>
+        <section class="sidebar">
+            <!-- Contenido de la barra lateral (si lo tienes) -->
+        </section>
+    </main>
+    <footer>
+        <!-- Contenido del pie de página (si lo tienes) -->
+    </footer>
+</body>
+</html>
