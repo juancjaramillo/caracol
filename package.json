@@ -12,6 +12,8 @@
     "gulp-less": "^5.0.0",
     "gulp-rename": "^2.0.0",
     "gulp-uglify": "^3.0.2",
+    "handlebar": "^1.0.0",
+    "handlebars": "^4.7.8",
     "webpack": "^5.88.2",
     "webpack-cli": "^5.1.4"
   },
@@ -156,7 +158,6 @@
     "graceful-fs": "^4.2.11",
     "gulp-cli": "^2.3.0",
     "gulplog": "^1.0.0",
-    "handlebar": "^1.0.0",
     "has": "^1.0.3",
     "has-flag": "^4.0.0",
     "has-property-descriptors": "^1.0.0",
@@ -308,6 +309,7 @@
     "semver-greatest-satisfied-range": "^1.1.0",
     "serve-index": "^1.9.1",
     "server-destroy": "^1.0.1",
+    "ses": "^0.18.8",
     "set-blocking": "^2.0.0",
     "set-value": "^2.0.1",
     "setprototypeof": "^1.2.0",
@@ -388,6 +390,11 @@
   "scripts": {
     "test": "tsrt"
   },
-  "author": "",
-  "license": "ISC"
+  "author": "JCJCJ",
+  "license": "ISC",
+  "keywords": [],
+  "repository": {
+    "type": "git",
+    "url": "caracol"
+  }
 }

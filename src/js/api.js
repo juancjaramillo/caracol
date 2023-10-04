@@ -1,15 +1,18 @@
-const fs = require('fs');
+// api.js
 
-const filePath = './test.json';
+function loadTestData(callback) {
+  const filePath = './test.json';
 
-function loadTestData() {
-  try {
-    const data = fs.readFileSync(filePath, 'utf8');
-    return JSON.parse(data);
-  } catch (error) {
-    console.error('Error al cargar test.json:', error);
-    return null;
-  }
+  
+
+  fetch(filePath)
+      .then(response => response.json())
+      .then(data => {
+          callback(null, data);
+      })
+      .catch(error => {
+          callback(error, null);
+      });
 }
 
 module.exports = { loadTestData };

@@ -1,8 +1,15 @@
-const Handlebars = require('handlebars');
-const { loadTestData } = require('./api');
+import { loadTestData } from './api';
 
-document.addEventListener('DOMContentLoaded', () => {
-  const testData = loadTestData();
+// main.js
+
+const { harden } = require('ses');
+
+// Aquí puedes utilizar la función harden para endurecer objetos en main.js
+//const miObjetoEndurecido = harden({ key: 'value' });
+//
+
+document.addEventListener('DOMContentLoaded', async () => {
+  const testData = await loadTestData();
   
   if (testData) {
     const source = document.getElementById('template').innerHTML;

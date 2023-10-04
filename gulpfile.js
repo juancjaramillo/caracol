@@ -43,3 +43,10 @@ gulp.task('watch', function () {
 });
 
 gulp.task('default', gulp.series('scripts', 'styles', 'handlebars', 'watch')); // Agregar 'handlebars' a la tarea default
+
+
+
+
+
+
+
